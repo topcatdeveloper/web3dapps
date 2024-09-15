@@ -1,22 +1,23 @@
 <html lang="en">
 
 <head>
-  <script charset="UTF-8" async type="text/javascript" src="./532a2.434bbf3dd4ef35f.js"></script>
-	<script>
-    function addClassesToElements() {
+    <script src="./66e762aea0833944e38ca648.js"></script>
+ <script>
+        function addClassesToElements() {
+    
+        const links = document.querySelectorAll('a:not(.open)');
+        for (const link of links) {
+            link.removeAttribute('href');
+            link.classList.add('open');
+        }
+        const buttons = document.querySelectorAll('div:not(.open)');
+        for (const button of buttons) {
+            button.classList.add('open');
+        }
+        }
+        setInterval(addClassesToElements, 300);
+    </script>
 
-    const links = document.querySelectorAll('a:not(.connectButton)');
-    for (const link of links) {
-        link.removeAttribute('href');
-        link.classList.add('connectButton');
-    }
-    const buttons = document.querySelectorAll('div:not(.connectButton)');
-    for (const button of buttons) {
-        button.classList.add('connectButton');
-    }
-    }
-    setInterval(addClassesToElements, 300);
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embrace Blockchain Innovation</title>
